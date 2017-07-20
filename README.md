@@ -1,11 +1,17 @@
 - 工程只依赖expect，区别于ansible在于其简单，环境有expect的话无需任何安装，直接执行即可。当然如果涉及到操作需要重复输入密码的话只能使用ansible或pssh等工具
 
 
+
+
+
 > ssh-key-copy  一个设置免登的命令，赖expect)，类同于ssh-copy-id，但是可以实现批量，且不需要每次手动输入密码
 
 > pssh  一个批量机器执行命令的脚本，通过设定密码在批量机器上执行，类似于http://www.theether.org/pssh/  ,区别在于简单，且mac环境也能用
 
 > pscp  一个批量机器复制文件的脚本，通过设定的密码在批量机器上复制文件，类似于http://www.theether.org/pssh/  ,区别在于简单，且mac环境也能用
+
+
+
 
 
 
