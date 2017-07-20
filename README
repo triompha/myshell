@@ -1,3 +1,13 @@
+- 工程纸依赖expect
+
+> ssh-key-copy  一个设置免登的命令，赖expect)，类同于ssh-copy-id，但是可以实现批量，且不需要每次手动输入密码
+> pssh  一个批量机器执行命令的脚本，通过设定密码在批量机器上执行，类似于http://www.theether.org/pssh/  ,区别在于简单，且mac环境也能用
+> pscp  一个批量机器复制文件的脚本，通过设定的密码在批量机器上复制文件，类似于http://www.theether.org/pssh/  ,区别在于简单，且mac环境也能用
+
+**myshell**是工作几年的一些linux命令积累
+
+### 代码块
+``` shell
 将IP列表写入文件中，然后读出
 for ip in `cat iplist`;do ssh-key-copy root@"${ip}" 1234; done
 
@@ -42,3 +52,7 @@ ssh -o StrictHostKeyChecking=no -o GSSAPIAuthentication=no root@${ip} "echo ${pa
 
 清理iptable信息
 iptables -F;iptables -X;
+```
+
+
+
