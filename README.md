@@ -4,7 +4,7 @@
 
 
 
-> **ssh-key-copy**  一个设置免登的命令，赖expect)，类同于ssh-copy-id，但是可以实现批量，且不需要每次手动输入密码
+> **ssh-key-copy**  一个设置免登的命令，类同于ssh-copy-id，但是可以实现批量，且不需要每次手动输入密码
 
 > **pssh**  一个批量机器执行命令的脚本，通过设定密码在批量机器上执行，类似于http://www.theether.org/pssh/  ,区别在于简单，且mac环境也能用
 
