@@ -1,0 +1,2 @@
+#!/bin/bash
+./eshell $0 $1 $2

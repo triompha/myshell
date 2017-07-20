@@ -1,0 +1,5 @@
+#!/usr/bin/expect -f
+spawn ssh -o StrictHostKeyChecking=no -o GSSAPIAuthentication=no [lindex $argv 1] "[lindex $argv 0]" 
+expect "*s*"
+send "[lindex $argv 2]\r\n"
+interact

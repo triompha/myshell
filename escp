@@ -1,0 +1,6 @@
+#!/usr/bin/expect -f
+spawn scp -o StrictHostKeyChecking=no -o GSSAPIAuthentication=no [lindex $argv 0] [lindex $argv 1]
+expect "*s*"
+send "[lindex $argv 2]\r"
+interact
+

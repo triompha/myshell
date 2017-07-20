@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# check if id_rsa file exist
+if [ ! -f $HOME/.ssh/id_rsa.pub ];then
+ssh-keygen -P '' -f $HOME/.ssh/id_rsa
+fi
+
+# check expect exist
+expectExit=`which expect |grep no`
+if [ "x$expectExit" != "x" ];then
+    echo "install expect on your system first!"
+    exit 1
+fi
+./eshell "mkdir -p ~/.ssh"  $1 $2
+./escp $HOME/.ssh/id_rsa.pub $1:~/.ssh/r_authorized_keys $2
+./eshell "cat ~/.ssh/r_authorized_keys >> ~/.ssh/authorized_keys"  $1 $2
